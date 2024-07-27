@@ -1,7 +1,5 @@
-# Mantis Free React Material UI Dashboard Template [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Download%20Mantis%20React%20-%20The%20professional%20Material%20designed%20React%20Admin%20Dashboard%20Template%20&url=https://mantisdashboard.io&via=codedthemes&hashtags=reactjs,webdev,developers,javascript)
+# Lobo Sistemas - Sistema de Matenimiento de Maquinaria Pesada
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/codedthemes/mantis-free-react-admin-template/blob/main/LICENSE)
 [![GitHub package version](https://img.shields.io/github/package-json/v/codedthemes/mantis-free-react-admin-template)](https://github.com/codedthemes/mantis-free-react-admin-template/)
 
 Mantis is a free and open source React dashboard template made using the Material UI React component library with aim of flexibility and better customizability.
@@ -19,8 +17,8 @@ Mantis has Ant Design principal on top of the MAterial UI React component librar
 The [Pro version](https://mantisdashboard.io) of Mantis react template includes features such as TypeScript, apps, authentication methods (i.e. JWT, Auth0, Firebase), advance components, form plugins, layouts, widgets, and more.
 
 | [Mantis Free](https://mantisdashboard.io/free) | [Mantis Pro](https://mantisdashboard.io)                                         |
-| ---------------------------------------------- | :------------------------------------------------------------------------------- |
-| **7** Demo pages                               | **85+** Demo pages                                                               |
+|------------------------------------------------| :------------------------------------------------------------------------------- |
+| -                                              |                                                              |
 | -                                              | ✓ Multi-language                                                                 |
 | -                                              | ✓ Dark/Light Mode 🌓                                                             |
 | -                                              | ✓ TypeScript version                                                             |
@@ -28,8 +26,8 @@ The [Pro version](https://mantisdashboard.io) of Mantis react template includes 
 | -                                              | ✓ Multiple color options                                                         |
 | -                                              | ✓ RTL                                                                            |
 | -                                              | ✓ JWT, Firebase, Auth0, AWS authentication                                       |
-| -                                              | ✓ [More components](https://mantisdashboard.io/components-overview/autocomplete) |
-| ✓ MIT License                                  | ✓ [Pro License](https://mui.com/store/license/)                                  |
+| -                                              | ✓ 
+| -                                              | ✓                                   |
 
 ## Why Mantis?
 
@@ -112,15 +110,12 @@ yarn start
 
 ## Author
 
-Mantis is managed by team [CodedThemes](https://codedthemes.com).
+CARRERA Tecsup C24 - [Tecsup](https://tecsup.edu.pe)
 
 ## Issues
 
 Please generate a [GitHub issue](https://github.com/codedthemes/mantis-free-react-admin-template/issues) if you found a bug in any version. We are try our best to resolve the issue.
 
-## License
-
-- Licensed under [MIT](https://github.com/codedthemes/datta-able-bootstrap-dashboard/blob/master/LICENSE)
 
 ## More Free React Material Admin Dashboard Templates
 
@@ -132,11 +127,4 @@ Please generate a [GitHub issue](https://github.com/codedthemes/mantis-free-reac
 - [Materially](https://codedthemes.com/item/materially-reactjs-admin-dashboard/)
 - [Berry](https://mui.com/store/items/berry-react-material-admin/)
 
-## Follow us
 
-- Website [https://mantisdashboard.io](https://mantisdashboard.io)
-- Blog [https://blog.mantisdashboard.io](https://blog.mantisdashboard.io)
-- CodedThemes [https://codedthemes.com](https://codedthemes.com)
-- Dribbble [https://dribbble.com/codedthemes](https://dribbble.com/codedthemes)
-- Facebook [https://www.facebook.com/codedthemes](https://www.facebook.com/codedthemes)
-- Twitter [https://twitter.com/codedthemes](https://twitter.com/codedthemes)
