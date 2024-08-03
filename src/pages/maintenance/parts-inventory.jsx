@@ -10,12 +10,12 @@
 
 // ============================|| COMPONENT - SHADOW ||============================ //
 
-export default function ReportExcel() {
-  // const theme = useTheme();
-
-  return (
-    <div>
-      <h1>Informe Excel</h1>
-    </div>
-  );
-}
+export default function PartsInventory() {
+    // const theme = useTheme();
+  
+    return (
+      <div>
+        <h1>Inventario de piezas</h1>
+      </div>
+    );
+  }

@@ -1,17 +1,19 @@
 // assets
 import {
-  FileExcelOutlined,
-  AimOutlined,
-  BlockOutlined,
   MonitorOutlined,
+  AimOutlined,
+  ReconciliationOutlined,
+  ProfileOutlined,
+  MessageOutlined,
 } from '@ant-design/icons';
 
 // icons
 const icons = {
-  FileExcelOutlined,
+  MonitorOutlined,
   AimOutlined,
-  BlockOutlined,
-  MonitorOutlined
+  ReconciliationOutlined,
+  ProfileOutlined,
+  MessageOutlined,
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
@@ -23,31 +25,38 @@ const inspection = {
   children: [
     {
       id: 'inspection-report',
-      title: 'Informe de inspección',
+      title: 'Reporte de inspección',
       type: 'item',
       url: '/inspection-report',
       icon: icons.MonitorOutlined
     },
     {
-      id: 'inspeccion-kpi',
-      title: 'Inspección KPI',
+      id: 'daily-report-operator',
+      title: 'Operador de informes diarios',
       type: 'item',
-      url: '/inpeccion-kpi',
+      url: '/daily-report-operator',
       icon: icons.AimOutlined
     },
     {
-      id: 'maintenance-kpi',
-      title: 'Mantenimiento KPI',
+      id: 'incident-report',
+      title: 'Reporte de incidente',
       type: 'item',
-      url: '/maintenance-kpi',
-      icon: icons.BlockOutlined
+      url: '/incident-report',
+      icon: icons.ReconciliationOutlined
     },
     {
-      id: 'fuel-management-kpi',
-      title: 'Gestión de combustible KPI',
+      id: 'inspection-forms',
+      title: 'Formularios de inspección',
       type: 'item',
-      url: '/fuel-management-kpi',
-      icon: icons.BlockOutlined
+      url: '/inspection-forms',
+      icon: icons.ProfileOutlined
+    },
+    {
+      id: 'reminder',
+      title: 'Recordatorio',
+      type: 'item',
+      url: '/reminder',
+      icon: icons.MessageOutlined
     }
   ]
 };

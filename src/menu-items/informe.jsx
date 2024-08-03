@@ -2,14 +2,16 @@
 import {
   FileExcelOutlined,
   AimOutlined,
-  BlockOutlined,
+  ToolOutlined,
+  ReconciliationOutlined
 } from '@ant-design/icons';
 
 // icons
 const icons = {
   FileExcelOutlined,
   AimOutlined,
-  BlockOutlined,
+  ToolOutlined,
+  ReconciliationOutlined
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
@@ -23,7 +25,7 @@ const informe = {
       id: 'informe-excel',
       title: 'Informe de Excel',
       type: 'item',
-      url: '/report/excel',
+      url: '/report-excel',
       icon: icons.FileExcelOutlined
     },
     {
@@ -38,14 +40,14 @@ const informe = {
       title: 'Mantenimiento KPI',
       type: 'item',
       url: '/maintenance-kpi',
-      icon: icons.BlockOutlined
+      icon: icons.ToolOutlined
     },
     {
       id: 'fuel-management-kpi',
       title: 'Gestión de combustible KPI',
       type: 'item',
       url: '/fuel-management-kpi',
-      icon: icons.BlockOutlined
+      icon: icons.ReconciliationOutlined
     }
   ]
 };

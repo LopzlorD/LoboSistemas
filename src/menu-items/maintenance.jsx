@@ -1,51 +1,71 @@
 // assets
 import {
-  FileExcelOutlined,
-  AimOutlined,
-  BlockOutlined,
+  ProfileOutlined,
+  MailOutlined,
+  CalendarOutlined,
+  ContainerOutlined,
+  BarcodeOutlined,
+  FolderOutlined
 } from '@ant-design/icons';
 
 // icons
 const icons = {
-  FileExcelOutlined,
-  AimOutlined,
-  BlockOutlined
+  ProfileOutlined,
+  MailOutlined,
+  CalendarOutlined,
+  ContainerOutlined,
+  BarcodeOutlined,
+  FolderOutlined
 };
 
 // ==============================|| MENU ITEMS - UTILITIES ||============================== //
 
 const maintenance = {
-  id: '',
-  title: 'Inspección',
+  id: 'maintenance',
+  title: 'Mantenimiento',
   type: 'group',
   children: [
     {
-      id: 'informe-excel',
-      title: 'Informe de Excel',
+      id: 'work-order',
+      title: 'Orden de trabajo',
       type: 'item',
-      url: '/infor-excel',
-      icon: icons.FileExcelOutlined
+      url: '/work-order',
+      icon: icons.ProfileOutlined
     },
     {
-      id: 'inspeccion-kpi',
-      title: 'Inspección KPI',
+      id: 'maintenance-request',
+      title: 'Solicitud de mantenimiento',
       type: 'item',
-      url: '/inpeccion-kpi',
-      icon: icons.AimOutlined
+      url: '/maintenance-request',
+      icon: icons.MailOutlined
     },
     {
-      id: 'maintenance-kpi',
-      title: 'Mantenimiento KPI',
+      id: 'service-hours',
+      title: 'Horario de servicio',
       type: 'item',
-      url: '/maintenance-kpi',
-      icon: icons.BlockOutlined
+      url: '/service-hours',
+      icon: icons.CalendarOutlined
     },
     {
-      id: 'fuel-management-kpi',
-      title: 'Gestión de combustible KPI',
+      id: 'parts-inventory',
+      title: 'Inventario de piezas',
       type: 'item',
-      url: '/fuel-management-kpi',
-      icon: icons.BlockOutlined
+      url: '/parts-inventory',
+      icon: icons.ContainerOutlined
+    },
+    {
+      id: 'work-code',
+      title: 'Código de trabajo',
+      type: 'item',
+      url: '/work-code',
+      icon: icons.BarcodeOutlined
+    },
+    {
+      id: 'task-master',
+      title: 'Maestro de tareas',
+      type: 'item',
+      url: '/task-master',
+      icon: icons.FolderOutlined
     }
   ]
 };
