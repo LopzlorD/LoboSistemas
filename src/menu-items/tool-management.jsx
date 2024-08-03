@@ -25,10 +25,10 @@ import {
         icon: icons.ContainerOutlined
       },
       {
-        id: 'problem/tool-return',
-        title: 'Problema/retorno de la herramienta',
+        id: 'tool-problem',
+        title: 'Problema de herramienta',
         type: 'item',
-        url: '/problem/tool-return',
+        url: '/tool-problem',
         icon: icons.IssuesCloseOutlined
       }
     ]

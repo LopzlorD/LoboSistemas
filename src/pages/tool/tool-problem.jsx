@@ -10,12 +10,12 @@
 
 // ============================|| COMPONENT - SHADOW ||============================ //
 
-export default function ToolProblemReturn() {
+export default function ToolProblem() {
     // const theme = useTheme();
   
     return (
       <div>
-        <h1>Problema/retorno de la herramienta</h1>
+        <h1>Problema de herramienta</h1>
       </div>
     );
   }
