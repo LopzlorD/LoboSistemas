@@ -5,6 +5,7 @@ import Loadable from 'components/Loadable';
 import Dashboard from 'layout/Dashboard';
 
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard/index')));
+const Default = Loadable(lazy(() => import('pages/start/default')));
 
 // Vistas Informe de analisis y KPI
 const ReportExcel = Loadable(lazy(() => import('pages/report/report-excel')));
@@ -41,6 +42,26 @@ const Sellers = Loadable(lazy(() => import('pages/order/sellers')));
 const Vehicle = Loadable(lazy(() => import('pages/vehicle/vehicle')));
 const VehicleDescription = Loadable(lazy(() => import('pages/vehicle/vehicle-description')));
 
+// Vistas Gestión de combustible
+const FuelLogger = Loadable(lazy(() => import('pages/fuel/fuel-logger')));
+const FuelBunker = Loadable(lazy(() => import('pages/fuel/fuel-bunker')));
+
+// Vistas Inventario de neumáticos
+const TireInventory = Loadable(lazy(() => import('pages/inventory/tire-inventory')));
+
+// Vistas Gestión de herramienta
+const ToolInventory = Loadable(lazy(() => import('pages/tool/tool-inventory')));
+const ToolProblem = Loadable(lazy(() => import('pages/tool/tool-problem')));
+
+// Vistas Cuaderno
+const Notebook = Loadable(lazy(() => import('pages/notebook/notebook')));
+
+// Vistas Datos maestros
+const TeamManagement = Loadable(lazy(() => import('pages/data/team-management')));
+const Documents = Loadable(lazy(() => import('pages/data/documents')));
+const SiteProject = Loadable(lazy(() => import('pages/data/site-project')));
+const Account = Loadable(lazy(() => import('pages/data/account')));
+
 
 // ==============================|| MAIN ROUTING ||============================== //
 
@@ -56,11 +77,12 @@ const MainRoutes = {
       path: 'dashboard',
       element: <DashboardDefault/>,
       children: [
-        {
-          path: 'default',
-          element: <DashboardDefault/>
-        }
+        
       ]
+    },
+    {
+      path: 'default',
+      element: <Default/>
     },
     {
       path: 'report-excel',
@@ -153,6 +175,47 @@ const MainRoutes = {
     {
       path: 'vehicle-description',
       element: <VehicleDescription/>
+    },
+    {
+      path: 'fuel-logger',
+      element: <FuelLogger/>
+    },
+    {
+      path: 'fuel-bunker',
+      element: <FuelBunker/>
+    },
+    ,
+    {
+      path: 'tire-inventory',
+      element: <TireInventory/>
+    },
+    {
+      path: 'tool-inventory',
+      element: <ToolInventory/>
+    },
+    {
+      path: 'tool-problem',
+      element: <ToolProblem/>
+    },
+    {
+      path: 'notebook',
+      element: <Notebook/>
+    },
+    {
+      path: 'team-management',
+      element: <TeamManagement/>
+    },
+    {
+      path: 'documents',
+      element: <Documents/>
+    },
+    {
+      path: 'site-project',
+      element: <SiteProject/>
+    },
+    {
+      path: 'account',
+      element: <Account/>
     }
   ]
 };
