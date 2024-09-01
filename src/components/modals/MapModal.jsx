@@ -1,8 +1,7 @@
-// MapModal.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react'; 
 import { Modal, Box, Typography, Button, Grid, Stack, TextField } from '@mui/material';
-import MapIcon from '@mui/icons-material/Map';
 import GoogleMapComponent from 'components/items/GoogleMapComponent';
+import { addWarehouse, fetchWarehouses } from 'api/apivehiculos';
 
 function getModalStyle() {
     const top = 50;
@@ -15,7 +14,35 @@ function getModalStyle() {
 }
 
 const MapModal = ({ open, handleClose }) => {
-    const [modalStyle] = React.useState(getModalStyle);
+    const [modalStyle] = useState(getModalStyle);
+    const [warehouseData, setWarehouseData] = useState({
+        nombre: '',
+        direccion: ''
+    });
+    const [warehouses, setWarehouses] = useState([]);
+
+    useEffect(() => {
+        if (open) {
+            fetchWarehouses().then(data => setWarehouses(data));
+        }
+    }, [open]);
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setWarehouseData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmitWarehouse = async (event) => {
+        event.preventDefault();
+        try {
+            const response = await addWarehouse(warehouseData);
+            console.log('Warehouse added:', response);
+            setWarehouses([...warehouses, response]); // Agrega el nuevo almacén a la lista
+            handleClose(); // Cerrar el modal después de la operación
+        } catch (error) {
+            console.error('Failed to add warehouse:', error);
+        }
+    };
 
     const modalBody = (
         <Box sx={{
@@ -31,33 +58,28 @@ const MapModal = ({ open, handleClose }) => {
             ...modalStyle
         }}>
             <Box sx={{ width: '70%', height: '100%', borderRight: '1px solid #000', pr: 2 }}>
-                <Typography variant="h6" component="h2">
-                    Mapa
-                </Typography>
-                {/* Aquí iría el componente de tu mapa, por ejemplo Google Maps o Leaflet */}
                 <div style={{ width: '100%', height: '100%' }}>
-  <GoogleMapComponent />
-</div>
-
+                    <GoogleMapComponent />
+                </div>
             </Box>
             <Box sx={{ width: '30%', height: '100%', pl: 2 }}>
                 <Typography variant="h6" component="h2">
-                    Almacenes
+                    <h2>Almacenes</h2>
                 </Typography>
-                <Stack spacing={2} sx={{ mt: 2 }}>
-                    <TextField fullWidth label="Nombre del almacén" />
-                    <TextField fullWidth label="Dirección del almacén" />
-                    <Button variant="contained" color="primary">
-                        Agregar almacén
-                    </Button>
-                </Stack>
+                <form onSubmit={handleSubmitWarehouse}>
+                    <Stack spacing={2}>
+                        <TextField fullWidth label="Nombre del almacén" name="nombre" value={warehouseData.nombre} onChange={handleInputChange} />
+                        <TextField fullWidth label="Dirección del almacén" name="direccion" value={warehouseData.direccion} onChange={handleInputChange} />
+                        <Button type="submit" variant="contained" color="primary">Agregar almacén</Button>
+                    </Stack>
+                </form>
                 <Box sx={{ mt: 4 }}>
                     <Typography variant="h6" component="h2">
-                        Lista de almacenes
+                        <h3>Lista de almacenes</h3>
                     </Typography>
-                    {/* Aquí puedes mapear y mostrar una lista de almacenes */}
-                    <div>Almacén 1</div>
-                    <div>Almacén 2</div>
+                    {warehouses.map((wh, index) => (
+                        <div key={index}>{wh.nombre} - {wh.direccion}</div>
+                    ))}
                 </Box>
             </Box>
         </Box>
